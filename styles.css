@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.sort-section {
+    display: flex;
+    align-items: center;
+}
+
+.sort-section label {
+    margin-right: 10px;
+}
+
+main {
+    display: flex;
+    margin-top: 20px;
+}
+
+.filters {
+    width: 20%;
+    padding: 15px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: solid 0.5px;
+    margin-right: 5px;
+
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-section h4 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.product-list {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    width: 22%;
+    background-color: transparent;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Added transition for hover effect */
+    border: solid 0.5px;
+    border-radius: 10px;
+
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-card p {
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: green;
+}
+
+.product-card .old-price {
+    text-decoration: line-through;
+    color: red;
+}
+
+option{
+    padding: 10px;
+}
+
+button {
+    background-color: rgb(141, 52, 52);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: rgb(92, 11, 11); /* Darker shade on hover */
+}
+
+@media (max-width: 768px) {
+    .filters, .product-list {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .product-card {
+        width: 48%; /* Adjust card width for better spacing on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%; /* Full width for mobile view */
+    }
+}

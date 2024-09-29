@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Filter & Sort UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Clothing Store</h1>
+        <div class="sort-section">
+            <label for="sort">Sort by: </label>
+            <select id="sort">
+                <option value="best-selling">Best Selling</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <aside class="filters">
+            <h2>Filters</h2>
+
+            <div class="filter-section">
+                <h4>Availability</h4>
+                <input type="checkbox" id="in-stock" name="availability">
+                <label for="in-stock">In stock (5)</label><br>
+                <input type="checkbox" id="out-of-stock" name="availability">
+                <label for="out-of-stock">Out of stock (3)</label>
+            </div>
+
+            <div class="filter-section">
+                <h4>Price</h4>
+                <label for="priceRange">Max price: <span id="priceDisplay">50.00$</span></label>
+                <input type="range" id="priceRange" min="0" max="50" value="50">
+            </div>
+
+            <div class="filter-section">
+                <h4>Product Type</h4>
+                <input type="checkbox" id="fashion" name="product-type">
+                <label for="fashion">Fashion (5)</label>
+            </div>
+
+            <div class="filter-section">
+                <h4>More Filters</h4>
+                <input type="checkbox" id="cloth" name="more-filters">
+                <label for="cloth">Cloth (5)</label>
+            </div>
+
+            <div class="filter-section">
+                <h4>Color</h4>
+                <input type="checkbox"  name="color">
+                <label for="red">Red</label><br>
+                <input type="checkbox" name="color">
+                <label for="green">Green</label><br>
+                <input type="checkbox"  name="color">
+                <label for="white">white</label>
+              
+            </div>
+        </aside>
+
+        <section class="product-list" id="productList">
+            <div class="product-card" data-price="30" data-availability="in-stock" data-type="fashion" data-brand="Levi's">
+                <img src="levis women.webp" alt="Women's Cotton Shirt">
+                <h3>Levi's Women's Cotton Shirt</h3>
+                <p><span class="price">30.00$</span> <span class="old-price">32.00$</span></p>
+                
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-price="22" data-availability="in-stock" data-type="fashion" data-brand="Levi's">
+                <img src="slevee printed.webp" alt="Women's Sweatshirt">
+                <h3>Levi's Women Sweatshirt</h3>
+                <p><span class="price">22.00$</span> <span class="old-price">25.00$</span></p>
+               
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-price="40" data-availability="in-stock" data-type="fashion" data-brand="Allen Solly">
+                <img src="sweat shirt.webp" alt="Fit Half Sleeve Print Shirt">
+                <h3>Allen Solly Fit Half Sleeve Print Shirt</h3>
+                <p><span class="price">40.00$</span> <span class="old-price">41.00$</span></p>
+               
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-price="50" data-availability="in-stock" data-type="fashion" data-brand="Zara">
+                <img src="zara tshirt.webp" alt="Down Cotton Tshirt">
+                <h3>Zara Down Cotton Tshirt</h3>
+                <p><span class="price">50.00$</span> <span class="old-price">54.00$</span></p>
+                
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-price="23" data-availability="out-of-stock" data-type="fashion" data-brand="Zara">
+                <img src="zara.webp" alt="Down Tshirt for Women">
+                <h3>Zara Down Tshirt for Women</h3>
+                <p><span class="price">23.00$</span></p>
+                
+                <button>Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
